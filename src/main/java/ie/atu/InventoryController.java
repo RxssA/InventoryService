@@ -31,12 +31,12 @@ public class InventoryController {
     public ResponseEntity<String> updateInventory(@Valid @RequestBody InventoryUpdateRequest request) {
         Long bookId = request.getBookId();
         int quantity = request.getQuantity();
-        String authur = String.valueOf(request.getAuthur());
+        String author = String.valueOf(request.getAuthor());
         String genre = String.valueOf(request.getGenre());
         String title = String.valueOf(request.getTitle());
 
 
-        boolean updated = InventoryService.updateInventory(bookId, quantity, title, authur, genre);
+        boolean updated = InventoryService.updateInventory(bookId, quantity, title, author, genre);
         if (updated){
             return ResponseEntity.ok("Inventory updated");
         } else {

@@ -27,8 +27,14 @@ public class InventoryService {
 
     }
 
-    public boolean updateInventory(Long bookId, int quantity, String title, String authur, String genre) {
+    public boolean updateInventory(Long bookId, int quantity, String title, String author, String genre) {
+        try {
+            return true;
+        }
+        catch (Exception e) {
 
-        return false;
+            e.printStackTrace();
+            return false;
+        }
     }
 }

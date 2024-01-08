@@ -10,7 +10,7 @@ public class InventoryUpdateRequest {
     private String title;
     private Long bookId;
     private int quantity;
-    private String authur;
+    private String author;
     private String genre;
 
 }
