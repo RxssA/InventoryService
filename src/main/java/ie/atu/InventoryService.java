@@ -39,6 +39,7 @@ public class InventoryService {
             System.out.println("author: " + author);
             System.out.println("genre: " + genre);
 
+
             if (existingInventory != null) {
                 existingInventory.setQuantity(quantity);
                 existingInventory.setTitle(title);

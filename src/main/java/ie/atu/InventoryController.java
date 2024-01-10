@@ -45,6 +45,7 @@ public class InventoryController {
 
 
 
+
         boolean updated = inventoryService.updateInventory(bookId, quantity, title, author, genre);
             System.out.println("Exiting updateInventory method successfully");
         if (updated) {
