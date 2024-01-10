@@ -5,26 +5,28 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
 @Data
+@AllArgsConstructor
 @NoArgsConstructor
 public class Inventory {
     @Id
     @GeneratedValue( strategy = GenerationType.IDENTITY)
     private long id;
-    @NotBlank
+    @NotBlank(message = "book ID cannot be blank")
     private String title;
 
-    @NotBlank
+    @NotBlank(message = "book ID cannot be blank")
     private long bookId;
 
-    @NotBlank
+    @NotBlank(message = "author cannot be blank")
     private String author;
 
-    @NotBlank
+    @NotBlank(message = "genre cannot be blank")
     private String genre;
 
     public void setQuantity(int quantity) {
